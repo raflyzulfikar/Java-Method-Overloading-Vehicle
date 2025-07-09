@@ -95,7 +95,8 @@ To run this program, you need to have the Java Development Kit (JDK) installed o
     ```
     java -cp src Main
     ```
-## Important Notes and Potential Enhancements 
-* **Further Encapsulation:** Attributes using `protected` in `Vehicle` (like `brand`, `model`, `year`, etc.) could be made `private` and accessed through `public` getter and setter methods for stricter encapsulation, if desired.
-* **Error Handling in `fuelUp`:** While there's a warning for exceeding capacity, consider adding more robust error handling (e.g., preventing negative fuel amounts).
-* **Polymorphism Demonstration:** This project is great for method overloading. To further demonstrate polymorphism, you could create other vehicle types (e.g., `Motorcycle`, `Truck`) and store them in a `List<Vehicle>`, then call shared methods like `move()` on them to observe polymorphic behavior.
+## Important Notes and Potential Enhancements
+* **Further Encapsulation:** Attributes using `protected` in `Vehicle` (like `brand`, `model`, `year`, `fuelType`, and `tankCapacity`) could be made `private` and accessed through `public` getter and setter methods for stricter encapsulation, which is a core OOP principle for better data control.
+* **Robust Error Handling in `fuelUp`:** While there's a warning for exceeding tank capacity, consider adding more robust error handling for the `fuelUp` methods (e.g., preventing negative fuel amounts as input, or validating `fuelType` strings against a predefined list).
+* **Polymorphism Demonstration:** This project effectively demonstrates method overloading. For a broader OOP demonstration, one could also include subclasses (e.g., `Motorcycle`, `Truck`) and store them in a `List<Vehicle>`, then call shared methods like `move()` polymorphically to illustrate different behaviors at runtime.
+* **Dynamic Data:** The `tankCapacity` is currently static per object. For a more dynamic system, this could be loaded from configuration or determined based on vehicle model.
